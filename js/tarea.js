@@ -26,7 +26,7 @@ class Tarea {
 
     let botonEditar = document.createElement("button");
     botonEditar.className = "boton";
-    botonEditar.innerText = "editar";
+    botonEditar.innerText = "Editar";
 
     botonEditar.addEventListener("click", () => this.actualizarTexto());
 
@@ -34,7 +34,7 @@ class Tarea {
 
     let botonBorrar = document.createElement("button");
     botonBorrar.className = "boton";
-    botonBorrar.innerText = "borrar";
+    botonBorrar.innerText = "Borrar";
 
     botonBorrar.addEventListener("click", () => this.borrarTarea());
 
@@ -70,12 +70,12 @@ class Tarea {
       this.DOM.children[1].classList.remove("visible");
       this.DOM.children[0].innerText = this.texto;
       this.DOM.children[0].classList.add("visible");
-      this.DOM.children[2].innerText = "editar";
+      this.DOM.children[2].innerText = "Editar";
     } else {
       this.DOM.children[0].classList.remove("visible");
       this.DOM.children[1].value = this.texto;
       this.DOM.children[1].classList.add("visible");
-      this.DOM.children[2].innerText = "guardar";
+      this.DOM.children[2].innerText = "Guardar";
     }
 
     this.editando = !this.editando;
